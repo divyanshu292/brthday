@@ -14,7 +14,7 @@ const events = [
     date: 'May 1, 2025',
     subtitle: 'That office party',
     description:
-      'We finally had a real conversation. Not just work stuff — actual talking. I remember thinking "I want to keep talking to this person forever." And here we are.',
+      'We finally had a real conversation. Not just work stuff, actual talking. I remember thinking "I want to keep talking to this person forever." And here we are.',
   },
   {
     title: 'Our First Date',
@@ -64,7 +64,7 @@ const Timeline = () => {
             How We Got Here
           </h2>
           <p className="text-gray-600 text-lg max-w-xl mx-auto">
-            From January 20th, 2025 to right now — every moment has been special.
+            From January 20th, 2025 to right now, every moment has been special.
           </p>
         </motion.div>
 

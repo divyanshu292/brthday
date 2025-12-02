@@ -167,7 +167,7 @@ const Quiz = () => {
             How Well Do You Know Us?
           </h2>
           <p className="text-gray-600 text-lg">
-            Just a quick quiz — nothing serious, just for fun.
+            Just a quick quiz, nothing serious, just for fun.
           </p>
         </motion.div>
 
@@ -283,7 +283,7 @@ const Quiz = () => {
                   <div className="bg-white rounded-xl p-6 border border-gray-200">
                     <p className="text-lg md:text-xl text-gray-800 max-w-xl mx-auto leading-relaxed mb-4" style={{ lineHeight: '1.8' }}>
                       But honestly? The score doesn't matter. What matters is that you're my forever 
-                      favorite person. You're not just good at these things — you're incredible at 
+                      favorite person. You're not just good at these things, you're incredible at 
                       everything, and you're even more incredible as a person.
                     </p>
                     <p className="text-xl text-pink-600 max-w-xl mx-auto font-semibold">
