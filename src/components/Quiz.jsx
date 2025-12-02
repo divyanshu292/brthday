@@ -101,7 +101,7 @@ const Quiz = () => {
 
         <div className="relative">
           <motion.div
-            className="bg-white rounded-2xl border border-pink-100/60 shadow-sm p-8 md:p-10"
+            className="bg-white rounded-2xl border border-gray-200 shadow-sm p-8 md:p-10"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -140,10 +140,10 @@ const Quiz = () => {
                           whileTap={{ scale: 0.98 }}
                           className={[
                             'text-left w-full border-2 rounded-xl px-6 py-4 text-lg transition-all',
-                            'bg-white/80 hover:bg-pink-50/50',
+                            'bg-white hover:bg-gray-50',
                             'flex items-center gap-4',
                             selected !== null && isCorrect
-                              ? 'border-yellow-400 bg-yellow-50/60 shadow-md'
+                              ? 'border-gray-400 bg-gray-50 shadow-md'
                               : '',
                             selected !== null && isSelected && !isCorrect
                               ? 'border-red-300 bg-red-50/40'
@@ -168,7 +168,7 @@ const Quiz = () => {
                       animate={{ opacity: 1, y: 0 }}
                       className={`mt-6 border-l-4 pl-5 py-2 rounded ${
                         selected === currentQuestion.correct
-                          ? 'border-yellow-400 bg-yellow-50/30 text-gray-800'
+                          ? 'border-gray-400 bg-gray-50 text-gray-800'
                           : 'border-red-300 bg-red-50/20 text-gray-800'
                       }`}
                     >
@@ -186,7 +186,7 @@ const Quiz = () => {
                       disabled={selected === null}
                       whileHover={{ scale: selected !== null ? 1.05 : 1 }}
                       whileTap={{ scale: selected !== null ? 0.95 : 1 }}
-                      className="px-8 py-3 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white text-base font-medium shadow-lg disabled:opacity-40 disabled:cursor-not-allowed disabled:shadow-none"
+                      className="px-8 py-3 rounded-full bg-gray-900 text-white text-base font-medium shadow-lg disabled:opacity-40 disabled:cursor-not-allowed disabled:shadow-none hover:bg-gray-800"
                     >
                       {current === questions.length - 1
                         ? 'See your result'
@@ -208,7 +208,7 @@ const Quiz = () => {
                   <h3 className="text-4xl md:text-5xl font-bold text-pink-600 mb-4">
                     You got {score} / {questions.length}
                   </h3>
-                  <div className="bg-pink-50/50 rounded-xl p-6 border border-pink-100">
+                  <div className="bg-white rounded-xl p-6 border border-gray-200">
                     <p className="text-lg md:text-xl text-gray-800 max-w-xl mx-auto leading-relaxed mb-4" style={{ lineHeight: '1.8' }}>
                       But honestly? The score doesn't matter. What matters is that you're my forever 
                       favorite person. You're not just good at these things — you're incredible at 
@@ -227,7 +227,7 @@ const Quiz = () => {
                     }}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="mt-6 px-8 py-3 rounded-full border-2 border-pink-300 text-pink-600 text-base font-medium bg-white/80 hover:bg-pink-50/50 transition-colors"
+                    className="mt-6 px-8 py-3 rounded-full border-2 border-gray-300 text-gray-700 text-base font-medium bg-white hover:bg-gray-50 transition-colors"
                   >
                     Play again
                   </motion.button>

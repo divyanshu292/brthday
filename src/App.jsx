@@ -48,38 +48,38 @@ function App() {
     <div className="min-h-screen overflow-hidden relative bg-white">
       {/* Little hearts floating upwards */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        {[...Array(15)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute"
-            initial={{
-              x: Math.random() * window.innerWidth,
-              y: window.innerHeight + 50,
-              scale: Math.random() * 0.3 + 0.15,
-              rotate: Math.random() * 360,
-            }}
-            animate={{
-              y: -100,
-              x: Math.random() * window.innerWidth,
-              rotate: Math.random() * 180,
-            }}
-            transition={{
-              duration: Math.random() * 10 + 12,
-              repeat: Infinity,
-              ease: 'linear',
-              delay: Math.random() * 5,
-            }}
-          >
-            <Heart 
-              fill="currentColor" 
-              className="text-pink-300/40"
-              size={Math.random() * 20 + 16} 
-              style={{ 
-                transform: `rotate(${Math.random() * 15 - 7.5}deg)`
+        {[...Array(15)].map((_, i) => {
+          const startX = Math.random() * window.innerWidth;
+          return (
+            <motion.div
+              key={i}
+              className="absolute"
+              initial={{
+                x: startX,
+                y: window.innerHeight + 100,
+                scale: Math.random() * 0.3 + 0.15,
+                rotate: 0,
               }}
-            />
-          </motion.div>
-        ))}
+              animate={{
+                y: -150,
+                x: startX + (Math.random() * 100 - 50),
+                rotate: 360,
+              }}
+              transition={{
+                duration: Math.random() * 8 + 15,
+                repeat: Infinity,
+                ease: 'linear',
+                delay: Math.random() * 3,
+              }}
+            >
+              <Heart 
+                fill="currentColor" 
+                className="text-pink-300/40"
+                size={Math.random() * 20 + 16} 
+              />
+            </motion.div>
+          );
+        })}
       </div>
 
       {/* Hero Section - More personal and warm */}
@@ -130,7 +130,7 @@ function App() {
               className="inline-block"
             >
               <div className="inline-block p-3">
-                <div className="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-pink-200 via-yellow-100 to-rose-200 rounded-lg flex items-center justify-center text-5xl md:text-6xl shadow-sm">
+                <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-lg flex items-center justify-center text-5xl md:text-6xl shadow-sm">
                   🌻
                 </div>
               </div>
@@ -178,12 +178,12 @@ function App() {
             className="relative"
           >
             {/* Letter style */}
-            <div className="bg-white rounded-lg p-8 md:p-12 border border-pink-100/50 relative shadow-sm">
+            <div className="bg-white rounded-lg p-8 md:p-12 border border-gray-200 relative shadow-sm">
               {/* Decorative corner elements */}
-              <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-pink-200/50"></div>
-              <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-pink-200/50"></div>
-              <div className="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-pink-200/50"></div>
-              <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-pink-200/50"></div>
+              <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-gray-300"></div>
+              <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-gray-300"></div>
+              <div className="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-gray-300"></div>
+              <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-gray-300"></div>
 
               <div className="space-y-6 text-gray-800" style={{ lineHeight: '1.9' }}>
                 <p className="text-3xl md:text-4xl text-pink-600 mb-6 font-semibold">
@@ -249,37 +249,37 @@ function App() {
                 title: 'Your Heart',
                 note: 'You care so much. About everything, about everyone. It\'s one of the first things I noticed about you, and it still amazes me.',
                 rotation: -1.5,
-                color: 'bg-yellow-100'
+                color: 'bg-white'
               },
               {
                 title: 'Your Smile',
                 note: 'Seriously, your smile is everything. It makes everything better. I could watch you smile all day.',
                 rotation: 2,
-                color: 'bg-pink-100'
+                color: 'bg-white'
               },
               {
                 title: 'How You Organize',
                 note: 'The way you keep everything neat and beautiful? It\'s like magic. You make order look easy.',
                 rotation: -0.8,
-                color: 'bg-blue-100'
+                color: 'bg-white'
               },
               {
                 title: 'Your Thoughtfulness',
                 note: 'You remember things I forget. You notice things I miss. You make me feel seen and cared for.',
                 rotation: 1.2,
-                color: 'bg-yellow-100'
+                color: 'bg-white'
               },
               {
                 title: 'Your Strength',
                 note: 'Even when things are hard, you handle it with grace. You\'re strong in the softest way.',
                 rotation: -1.8,
-                color: 'bg-pink-100'
+                color: 'bg-white'
               },
               {
                 title: 'Just... You',
                 note: 'Everything. The way you laugh, think, love. You\'re perfect exactly as you are.',
                 rotation: 0.5,
-                color: 'bg-blue-100'
+                color: 'bg-white'
               },
             ].map((item, index) => (
               <motion.div

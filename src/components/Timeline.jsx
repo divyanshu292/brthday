@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 
 const events = [
   {
-    title: 'The Day We Met',
+    title: 'The Day I Saw You',
     date: 'January 20, 2025',
-    subtitle: 'My first day at the office',
+    subtitle: 'I saw her',
     description:
-      'I was nervous, new, and had no idea what I was doing. Then I saw you, and suddenly everything felt a little less scary. I didn\'t know it then, but that was the day my life changed.',
+      'I saw you. But didn\'t know you would be the one. Little did I know that seeing you that day would change everything.',
   },
   {
     title: 'We Actually Talked',
@@ -19,9 +19,9 @@ const events = [
   {
     title: 'Our First Date',
     date: 'May 18, 2025',
-    subtitle: 'Movie night',
+    subtitle: 'Movie day',
     description:
-      'I was so nervous I probably planned it way too much. But sitting there next to you, I knew I wanted to do this a million more times. With you.',
+      'It was a movie day. We went to see Final Destination in the noon. Sitting there next to you, I knew I wanted to do this a million more times. With you.',
   },
   {
     title: 'We Said It',
@@ -71,11 +71,9 @@ const Timeline = () => {
         <div className="relative">
           {/* Organic, hand-drawn style line */}
           <div className="absolute left-1/2 top-0 bottom-0 w-0.5 transform -translate-x-1/2">
-            <div className="absolute inset-0 bg-gradient-to-b from-pink-300/60 via-yellow-300/40 to-pink-300/60" 
+            <div className="absolute inset-0 bg-gray-200" 
                  style={{ 
-                   width: '2px',
-                   filter: 'blur(0.5px)',
-                   boxShadow: '0 0 2px rgba(236, 72, 153, 0.3)'
+                   width: '2px'
                  }} 
             />
           </div>
@@ -108,8 +106,7 @@ const Timeline = () => {
                         transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
                         className="relative"
                       >
-                        <div className="w-5 h-5 rounded-full bg-white border-3 border-pink-400 shadow-lg relative">
-                          <div className="absolute inset-0 rounded-full bg-pink-300/40 blur-md"></div>
+                        <div className="w-5 h-5 rounded-full bg-white border-2 border-gray-300 shadow-lg relative">
                         </div>
                       </motion.div>
                     </div>
@@ -117,7 +114,7 @@ const Timeline = () => {
                     {/* Card with more personality */}
                     <motion.div
                       whileHover={{ scale: 1.02, y: -2 }}
-                      className="bg-white rounded-xl border border-pink-100/60 shadow-sm px-6 py-6 md:px-8 md:py-7 relative"
+                      className="bg-white rounded-xl border border-gray-200 shadow-sm px-6 py-6 md:px-8 md:py-7 relative"
                     >
                       <p className="text-xs text-pink-500/70 mb-2 tracking-wide">
                         {item.date}
