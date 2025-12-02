@@ -51,6 +51,78 @@ const questions = [
     explanation: 'You. Just like everything else, you have this gentle touch that makes things grow and bloom.',
     wrongExplanation: 'Wrong! It\'s Akshita. Just like everything else, she has this gentle touch that makes things grow and bloom.',
   },
+  {
+    id: 7,
+    question: 'Who is more likely to forget where they put their phone?',
+    options: ['Aryan', 'Akshita'],
+    correct: 0,
+    explanation: 'Definitely me! I\'m always losing track of things, but you always know where everything is.',
+    wrongExplanation: 'Nope! It\'s Aryan. He\'s always losing track of things, but Akshita always knows where everything is.',
+  },
+  {
+    id: 8,
+    question: 'Who is better at making the other laugh?',
+    options: ['Aryan', 'Akshita'],
+    correct: 1,
+    explanation: 'You. Your laugh is my favorite sound, and when you smile, I can\'t help but smile too. You make everything funnier.',
+    wrongExplanation: 'Wrong! It\'s Akshita. Her laugh is his favorite sound, and when she smiles, he can\'t help but smile too. She makes everything funnier.',
+  },
+  {
+    id: 9,
+    question: 'Who is more likely to stay up late talking?',
+    options: ['Aryan', 'Akshita'],
+    correct: 0,
+    explanation: 'Me! I could talk to you all night. Time just disappears when we\'re together.',
+    wrongExplanation: 'Nope! It\'s Aryan. He could talk to her all night. Time just disappears when they\'re together.',
+  },
+  {
+    id: 10,
+    question: 'Who remembers what the other said they wanted weeks ago?',
+    options: ['Aryan', 'Akshita'],
+    correct: 1,
+    explanation: 'You. You remember everything I mention, even the smallest things. It\'s one of the things that makes you so special.',
+    wrongExplanation: 'Wrong! It\'s Akshita. She remembers everything he mentions, even the smallest things. It\'s one of the things that makes her so special.',
+  },
+  {
+    id: 11,
+    question: 'Who is better at choosing what to watch?',
+    options: ['Aryan', 'Akshita'],
+    correct: 1,
+    explanation: 'You. You always pick the best movies and shows. I trust your taste completely.',
+    wrongExplanation: 'Nope! It\'s Akshita. She always picks the best movies and shows. He trusts her taste completely.',
+  },
+  {
+    id: 12,
+    question: 'Who is more likely to send a good morning text?',
+    options: ['Aryan', 'Akshita'],
+    correct: 1,
+    explanation: 'You. You make every morning better with your messages. It\'s the best way to start the day.',
+    wrongExplanation: 'Wrong! It\'s Akshita. She makes every morning better with her messages. It\'s the best way to start the day.',
+  },
+  {
+    id: 13,
+    question: 'Who is better at giving compliments?',
+    options: ['Aryan', 'Akshita'],
+    correct: 1,
+    explanation: 'You. You always know the right thing to say to make me feel special. Your words mean everything.',
+    wrongExplanation: 'Nope! It\'s Akshita. She always knows the right thing to say to make him feel special. Her words mean everything.',
+  },
+  {
+    id: 14,
+    question: 'Who is more likely to plan a surprise?',
+    options: ['Aryan', 'Akshita'],
+    correct: 1,
+    explanation: 'You. You\'re always thinking of ways to make things special. Your surprises are the best.',
+    wrongExplanation: 'Wrong! It\'s Akshita. She\'s always thinking of ways to make things special. Her surprises are the best.',
+  },
+  {
+    id: 15,
+    question: 'Who makes the other feel most loved?',
+    options: ['Aryan', 'Akshita'],
+    correct: 1,
+    explanation: 'You. Every single day, in a million little ways, you make me feel loved. You\'re amazing.',
+    wrongExplanation: 'Nope! It\'s Akshita. Every single day, in a million little ways, she makes him feel loved. She\'s amazing.',
+  },
 ];
 
 const Quiz = () => {
@@ -214,7 +286,7 @@ const Quiz = () => {
                       favorite person. You're not just good at these things — you're incredible at 
                       everything, and you're even more incredible as a person.
                     </p>
-                    <p className="text-base text-gray-700 max-w-xl mx-auto text-xl text-pink-600 font-semibold">
+                    <p className="text-xl text-pink-600 max-w-xl mx-auto font-semibold">
                       Happy 24th birthday, Akshita. You mean the world to me.
                     </p>
                   </div>

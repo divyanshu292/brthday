@@ -167,6 +167,65 @@ function App() {
         </motion.div>
       </section>
 
+      {/* I Love Everything About You Section */}
+      <section className="min-h-screen py-20 px-4 relative bg-white">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <p className="text-sm text-pink-500/70 mb-3 tracking-wide">
+              Everything about you
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12">
+              I Love Every Single Thing
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              { feature: 'Your Face', description: 'I love your face. Every expression, every look, every moment. It\'s the most beautiful face I\'ve ever seen.' },
+              { feature: 'Your Hair', description: 'I love your hair. The way it falls, the way it moves. Everything about it is perfect.' },
+              { feature: 'Your Nose', description: 'I love your nose. It\'s perfect. Just like everything else about you.' },
+              { feature: 'Your Smile', description: 'I love your smile. It lights up my entire world. It\'s my favorite thing to see.' },
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white rounded-xl border border-gray-200 shadow-sm p-8"
+              >
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                  {item.feature}
+                </h3>
+                <p className="text-lg text-gray-700 leading-relaxed" style={{ lineHeight: '1.8' }}>
+                  {item.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-12 text-center"
+          >
+            <p className="text-2xl md:text-3xl text-gray-900 font-semibold leading-relaxed" style={{ lineHeight: '1.8' }}>
+              I love everything about you.<br />
+              Every little detail, every part of you,<br />
+              <span className="text-pink-600">everything.</span>
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Personal Message Section - Like a handwritten letter */}
       <section className="min-h-screen py-20 px-4 relative">
         <div className="max-w-4xl mx-auto">
@@ -201,6 +260,19 @@ function App() {
                   of things, of people, of me... it shows how much you care, and I notice. I really do.
                 </p>
 
+                <p className="text-lg md:text-xl leading-relaxed">
+                  I am so incredibly proud of you. I'm proud of how you're doing in life — the way you 
+                  handle everything with grace and strength. I'm proud of your career, of how hard you work, 
+                  of how you never give up. I'm proud of every aspect of your life because you're doing 
+                  amazing things, and you're becoming the person you're meant to be.
+                </p>
+
+                <p className="text-lg md:text-xl leading-relaxed">
+                  Watching you grow, watching you succeed, watching you be you — it fills me with so much 
+                  pride and love. You're not just doing well, you're thriving. And I'm here, cheering you 
+                  on every step of the way, because I believe in you completely.
+                </p>
+
                 <div className="my-8 flex items-center justify-center gap-3">
                   <Heart className="text-red-400 fill-red-300 w-6 h-6" style={{ transform: 'rotate(-15deg)' }} />
                   <Heart className="text-red-400 fill-red-300 w-8 h-8" />
@@ -209,7 +281,8 @@ function App() {
 
                 <p className="text-lg md:text-xl leading-relaxed">
                   For your 24th year, I just want you to know how much you matter. To me, to everyone 
-                  who knows you. You're strong, you're kind, and you're absolutely amazing just as you are.
+                  who knows you. You're strong, you're kind, you're absolutely amazing just as you are, 
+                  and I'm so proud to be part of your life.
                 </p>
 
                 <p className="text-2xl md:text-3xl text-pink-600 mt-8 text-right font-semibold">
@@ -308,34 +381,6 @@ function App() {
 
       {/* Fun Quiz Section */}
       <Quiz />
-
-      {/* Footer - More personal */}
-      <footer className="py-16 text-center relative">
-        <div className="max-w-2xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="space-y-4"
-          >
-            <p className="text-gray-600 text-base mb-2">
-              Made with lots of love (and probably too much coffee)
-            </p>
-            <p className="text-2xl text-pink-600 mb-4 font-semibold">
-              For you, Akshita
-            </p>
-            <p className="text-sm text-gray-500">
-              Your 24th birthday · December 3, 2025
-            </p>
-            <div className="flex items-center justify-center gap-2 mt-6">
-              <Heart className="text-red-400 fill-red-300 w-5 h-5" />
-              <span className="text-gray-600 text-sm">Forever yours, Aryan</span>
-              <Heart className="text-red-400 fill-red-300 w-5 h-5" />
-            </div>
-          </motion.div>
-        </div>
-      </footer>
     </div>
   );
 }
