@@ -4,6 +4,7 @@ import confetti from 'canvas-confetti';
 import { Heart, Sparkles } from 'lucide-react';
 import Timeline from './components/Timeline';
 import Quiz from './components/Quiz';
+import WakeUp from './components/WakeUp';
 
 function App() {
   const [showConfetti, setShowConfetti] = useState(false);
@@ -46,6 +47,9 @@ function App() {
 
   return (
     <div className="min-h-screen overflow-hidden relative bg-white">
+      {/* Wake Up Component - December 19th Special */}
+      <WakeUp />
+      
       {/* Little hearts floating upwards */}
       <div className="fixed inset-0 pointer-events-none z-0">
         {[...Array(15)].map((_, i) => {
